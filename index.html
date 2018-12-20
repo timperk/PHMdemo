@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PHM App</title>
+  <meta name="description" content="Pupulation Health Management Document Viewer App Layout">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>     
+    
+  <link rel="apple-touch-icon" sizes="128x128" href="images/ICON_V02.jpg">
+  <link rel="icon" type="image/jpg" href="images/ICON_V02.jpg" sizes="128x128">   
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>    
+    
+</head>
+
+<body>
+
+<div id="loader-wrapper">
+    <img src="images/loading-logo.png" width="655" class="logo-loadscreen" />
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>  
+    
+    <nav id="menu" class="menu">
+        <header class="menu-header">
+          <a href="#"><span class="menu-header-title">Main Navigation</span></a>
+        </header>
+
+      <section class="menu-section">
+        <ul class="menu-section-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">My Saved Documents</a></li>
+          <li><a href="#">Support Materials</a></li>
+        </ul>
+      </section>
+    </nav>
+
+<main id="panel">
+    <header>
+        <button class="toggle-button">☰</button>
+      </header>
+        
+    <div class="contain">
+                        
+        <!-- <div class="headspace"><a href="http://fortestage.com/phm/"><img src="images/header.jpg" /></a></div> -->
+        <div class="logo-area"><img src="images/Header_Bar.png" /></div>
+    
+        <div class="zone fader one"><a href="cat-landing-zone1.html"><img src="images/Zone01_button.png" /></a></div>
+        <div class="zone fader two"><a href="cat-landing-zone2.html"><img src="images/Zone02_button.png" /></a></div>
+        <div class="zone fader three"><a href="cat-landing-zone3.html"><img src="images/Zone03_button.png" /></a></div>   	
+        <div class="zone fader four"><a href="cat-landing-zone4.html"><img src="images/Zone04_button.png" /></a></div>
+         
+        <div class="zone half fader five"><a href="myzone.html"><img src="images/MyZone_button.png" /></a></div>
+        <div class="zone support-bg half fader five">
+            <div class="supportmat">
+                <div><img src="images/support_mat_1.jpg" /></div>
+                <div><img src="images/support_mat_2.jpg" /></div>
+                <div><img src="images/support_mat_3.jpg" /></div>
+                <div><img src="images/support_mat_4.jpg" /></div>
+                <div><img src="images/support_mat_5.jpg" /></div>
+                <div><img src="images/support_mat_6.jpg" /></div>
+                <div><img src="images/support_mat_7.jpg" /></div>
+            </div>    
+        </div>
+        <br clear="all" />
+        
+    </div>
+</main>
+    
+</body>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="js/main.js"></script>    
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script src="js/slideout.min.js"></script>
+<script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70,
+        'touchMove': false,
+        'touch': false
+      });
+
+      // Toggle button
+      document.querySelector('.toggle-button').addEventListener('click', function() {
+        slideout.toggle();
+      });
+    </script>    
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('.supportmat').slick({
+  centerMode: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  variableWidth: true,     
+  autoplaySpeed: 5000,
+ });
+});    
+</script>    
+    
+    
+</html>

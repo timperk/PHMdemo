@@ -1,0 +1,782 @@
+body {background: #fff; margin: 0; padding: 0;}
+.headspace {width: 100%; max-height: 76px;}
+.logo-area {width: 100%; max-height: 87px;
+    margin: 0px auto 10px auto;}
+.logo-area-int {width: 100%; max-height: 87px;
+    margin: 0px auto -6px auto; z-index: 1; position: relative;}
+
+.contain {max-width:1024px; width: 100%; min-height: 1500px; margin: 0px auto; display: block; background: url(../images/background_texture.png) 0 0 repeat-y;}
+img {width: 100%; height: auto; display: block;}
+.zone {margin: 0px auto 10px auto;}
+.zonetitle {margin: 0px;}
+.zone-ins {margin: 30px auto; width: 90%; cursor: pointer;}
+
+.half {max-width: 512px; width: 50%; display: block; float: left;}
+
+.third {max-width: 341px; width: 33%; margin: 20px auto 30px auto; display: block; float: left;}
+.third img {
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+}
+      
+.zone-blk img:last-child{display:none}
+.zone-blk:hover img:first-child{display:none}
+.zone-blk:hover img:last-child{display:block}
+
+.support-bg {max-width: 512px; max-height: 227px; min-height: 172px; background: url(../images/supportmat_btn_new.png) 0 0 no-repeat; background-size: contain;}
+
+.contin {max-width: 978px; height: 303px; background: url(../images/continuum_green-static.png) 0 0 no-repeat; background-size: contain; margin-top: 20px; position: relative;}
+
+.contin-guts {    
+    width: 978px;
+    height: 303px;
+    background: url(../images/green-screen.jpg) 0 0 no-repeat;
+    margin: -303px 0 0 30px;
+    z-index: 30;
+    position: relative;
+}
+
+.sect-1, .sect-2, .sect-3, .sect-4, .sect-5, .sect-6 { float: left; height: 200px;}
+
+.sect-1 a, .sect-2 a, .sect-3 a, .sect-4 a, .sect-5 a, .sect-6 a { display: block; width: 100%; height: 100%;}
+
+.sect-1 {position: absolute; top: 50px; left: 68px; width: 140px;}
+.sect-2 {position: absolute; top: 50px; left: 206px; width: 140px;}
+.sect-3 {position: absolute; top: 50px; left: 345px; width: 140px;}
+.sect-4 {position: absolute; top: 50px; left: 484px; width: 140px;}
+.sect-5 {position: absolute; top: 50px; left: 623px; width: 140px;}
+.sect-6 {position: absolute; top: 50px; left: 758px; width: 140px;}
+
+.sect-1 a:focus, .sect-1 a:hover {background: url(../images/sect1-hov.png) center 72px no-repeat; background-size: 80%;}
+.sect-2 a:focus, .sect-2 a:hover {background: url(../images/sect2-hov.png) center 63px no-repeat; background-size: 80%;}
+.sect-3 a:focus, .sect-3 a:hover {background: url(../images/sect3-hov.png) center 56px no-repeat; background-size: 80%;}
+.sect-4 a:focus, .sect-4 a:hover {background: url(../images/sect4-hov.png) center 45px no-repeat; background-size: 80%;}
+.sect-5 a:focus, .sect-5 a:hover {background: url(../images/sect5-hov.png) center 41px no-repeat; background-size: 80%;}
+.sect-6 a:focus, .sect-6 a:hover {background: url(../images/sect6-hov.png) center 27px no-repeat; background-size: 80%;}
+
+
+
+
+
+
+/* Fade in CSS3 */
+
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeOut { from { width:716px; height: 215px; } to { width:1px; height: 215px; } }
+@-moz-keyframes fadeOut { from { width:716px; height: 215px; } to { width:1px; height: 215px; } }
+@keyframes fadeOut { from { width:716px; height: 215px; } to { width:1px; height: 215px; } }
+
+.fader-rev {
+	opacity:1;  /* make things invisible upon start */
+	-webkit-animation:fadeOut ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeOut ease-in 1;
+	animation:fadeOut ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:.5s;
+	-moz-animation-duration:.5s;
+	animation-duration:.5s;
+}
+
+.fader-rev.int-two {
+-webkit-animation-delay: .8s;
+-moz-animation-delay: .8s;
+animation-delay: .8s;
+}
+
+
+.fader {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:0.3s;
+	-moz-animation-duration:0.3s;
+	animation-duration:0.3s;
+}
+
+.fader.one {
+-webkit-animation-delay: 4.4s;
+-moz-animation-delay: 4.4s;
+animation-delay: 4.4s;
+}
+
+.fader.two {
+-webkit-animation-delay: 4.7s;
+-moz-animation-delay:4.7s;
+animation-delay: 4.7s;
+}
+
+.fader.three {
+-webkit-animation-delay: 5s;
+-moz-animation-delay: 5s;
+animation-delay: 5s;
+}
+
+.fader.four {
+-webkit-animation-delay: 5.3s;
+-moz-animation-delay: 5.3s;
+animation-delay: 5.3s;
+}
+
+.fader.five {
+-webkit-animation-delay: 5.6s;
+-moz-animation-delay: 5.6s;
+animation-delay: 5.6s;
+}
+
+.fader.int-one {
+-webkit-animation-delay: .4s;
+-moz-animation-delay: .4s;
+animation-delay: .4s;
+}
+
+.fader.int-two {
+-webkit-animation-delay: .8s;
+-moz-animation-delay: .8s;
+animation-delay: .8s;
+}
+
+.toggle-button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    font-size: 2.36em;
+    top: 12px;
+    left: 12px;
+    font-weight: bold;
+    color:#4C4C4C;
+    z-index: 2;
+}
+
+.slideout-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: none;
+}
+
+.slideout-panel {
+  position:relative;
+  z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+
+.menu {
+  background-image: linear-gradient(145deg, #1D1F20, #4C4C4C);
+}
+
+a {
+  color: #4B5;
+  text-decoration: none;
+}
+
+.menu a {
+  color: #fff;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu-header {
+  border-bottom: 1px solid #2a2d2f;
+  padding: 20px;
+  background-size: 32px;
+}
+
+.menu-header-title {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.menu-section {
+  margin: 25px 0;
+}
+
+.menu-section-title {
+  text-transform: uppercase;
+  color: #85888d;
+  font-weight: 200;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  margin:0;
+}
+
+.menu-section-list {
+  padding:0;
+  margin: 10px 0;
+  list-style:none;
+}
+
+.menu-section-list a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.panel {
+  text-align: center;
+  padding-top: 5px;
+  min-height: 100%;
+}
+
+#mocha {
+  text-align: left;
+  margin:0 !important;
+}
+
+#mocha-stats {
+  top: 70px;
+}
+
+/**
+ * Header
+ */
+.panel-header {
+  margin: 120px auto 55px;
+}
+
+.title {
+  font-size: 3.2em;
+  line-height: 1em;
+  margin: 0 0 15px;
+  color: #4B5;
+  font-weight: 400;
+}
+
+/**
+ * hamburger
+ */
+.btn-hamburger {
+  border: none;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  outline:none;
+  background: url('assets/menu.png') no-repeat center;
+  width: 50px;
+  height: 50px;
+}
+
+/**
+ * Boxes
+ */
+.box {
+  border: 1px solid #4b5;
+  border-radius: 4px;
+  text-align: left;
+  margin: 50px 10px;
+  position: relative;
+}
+
+.box:before,
+.box:after {
+  content: ' ';
+  display: inline-block;
+  width: 1px;
+  height: 50px;
+  border-left: 1px solid #4b5;
+  position: absolute;
+  left: 50%;
+}
+
+.box:before {
+  top: -50px;
+}
+
+.box:after {
+  bottom: -50px;
+}
+
+.box-title {
+  margin: 0;
+  padding:10px 20px;
+  border-bottom: 1px solid #4b5;
+  color: #4b5;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.box-content {
+  padding:20px;
+  background-color: #f8f8f8;
+}
+
+/**
+ * Medium Screens
+ */
+@media all and (min-width:40em) {
+
+  .btn-hamburger {
+    top: 20px;
+    left: 30px;
+  }
+
+  .panel-header {
+    margin-top: 40px;
+    width: 455px;
+  }
+
+  .title {
+    font-size: 4.2em;
+  }
+}
+
+/**
+ * Large Screens
+ */
+@media all and (min-width: 54em) {
+  .box {
+    width: 70%;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+}
+
+/**
+ * Footer
+ */
+.panel-footer {
+  margin: 10px auto 20px;
+}
+
+.panel-footer p {
+  padding-bottom: 20px;
+}
+
+.heart {
+  font-style: normal;
+  font-weight: 500;
+  color: #c0392b;
+  text-decoration: none;
+}
+
+
+
+
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+p {
+    line-height: 1.33em;
+    color: #7E7E7E;
+}
+h1 {
+    color: #EEEEEE;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #0b66b0;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #36c2eb;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #95dcf7;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        /*background: url(../images/loading-bg.png) 0 0 repeat-y;*/
+        background: #fff;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+    
+    /* JavaScript Turned Off */
+    .no-js #loader-wrapper {
+        display: none;
+    }
+    .no-js h1 {
+        color: #222222;
+    }
+
+
+.logo-loadscreen {
+    margin:0px auto;
+    max-width:655px;
+    z-index:1001;
+    top:40%;
+    position:relative;
+    
+     animation:logo-loadscreen .5s 1;
+    -webkit-animation:logo-loadscreen .5s 1;
+    animation-fill-mode: forwards;
+    
+    animation-delay:2.5s;
+    -webkit-animation-delay:2.5s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    
+} 
+
+@keyframes logo-loadscreen{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes logo-loadscreen{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* 
+	Ok so you have made it this far, that means you are very keen to on my code. 
+	Anyway I don't really mind it. This is a great way to learn so you actually doing the right thing:)
+	Follow me @ihatetomatoes
+*/
+
